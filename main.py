@@ -46,7 +46,7 @@ def encrypt_image_file(input_path, encrypted_path, key):
     encrypted_bytes = encrypt_data(image_bytes, key)
     with open(encrypted_path, "wb") as f:
         f.write(encrypted_bytes)
-    print("✅ Image Encrypted Successfully!")
+    print("Image Encrypted Successfully!")
 
 # Load encrypted file and decrypt
 def decrypt_image_file(encrypted_path, output_path, key, original_shape):
@@ -56,7 +56,7 @@ def decrypt_image_file(encrypted_path, output_path, key, original_shape):
     decrypted_bytes = decrypt_data(encrypted_data, key)
     decrypted_img = bytes_to_image(decrypted_bytes, original_shape)
     decrypted_img.save(output_path)
-    print("✅ Image Decrypted Successfully!")
+    print("Image Decrypted Successfully!")
 
 # MAIN FUNCTION
 if __name__ == "__main__":
